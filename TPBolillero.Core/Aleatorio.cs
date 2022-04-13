@@ -5,6 +5,10 @@ namespace TPBolillero.Core
     public class Aleatorio : IAzar
     {
         private Random r = new Random();
-        //public SacarBolilla(List<byte>) : byte
+        public byte SacarBolilla(List<byte> numeros)
+        {
+            var indiceAleatorio = Convert.ToByte(r.Next(0, numeros.Count));
+            return numeros[indiceAleatorio];
+        }
     }
 }
