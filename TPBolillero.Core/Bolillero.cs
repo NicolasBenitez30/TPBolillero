@@ -26,7 +26,7 @@ namespace TPBolillero.Core
             Afuera.AddRange(Adentro);
             Afuera.Clear();
         }
-        public byte SacarBolillas()
+        public byte SacarBolilla()
         {
             var bol = Azar.SacarBolilla(Adentro);
             Afuera.Add(bol);
@@ -34,7 +34,9 @@ namespace TPBolillero.Core
             return bol;
         }
 
-        //public bool Jugar(List<byte>)
-        //public JugarN(List<byte>) : long
+        public bool Jugar(List<byte> numeros)
+            => numeros.TrueForAll(n => n == SacarBolilla());
+
+        // public  JugarN(List<byte> numeros)
     }
 }
