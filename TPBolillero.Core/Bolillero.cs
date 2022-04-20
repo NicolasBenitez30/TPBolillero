@@ -18,7 +18,7 @@ namespace TPBolillero.Core
             => CrearBolillas(numeros);
         private void CrearBolillas(byte numeros)
         {
-            for (int i = 0; i < Adentro.Count; i++)
+            for (int i = 0; i < numeros -1; i++)
                 Adentro.Add(numeros);
         }
         public void ReIngresar()
@@ -37,6 +37,15 @@ namespace TPBolillero.Core
         public bool Jugar(List<byte> numeros)
             => numeros.TrueForAll(n => n == SacarBolilla());
 
-        // public  JugarN(List<byte> numeros)
+        public long JugarN(List<byte> numeros, long veces)
+        {
+            long cuenta = 0;
+            for(long i = 0; i < veces; i++)
+            {
+                if(Jugar(numeros))
+                    cuenta++;                
+            }
+            return cuenta;
+        }
     }
 }
