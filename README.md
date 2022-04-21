@@ -1,6 +1,5 @@
 <!-- Completa abajo cambiando ET12DE1Computacion a tu user|organización y template a tu repo, te recomiendo usar el Find & Replace de tu editor -->
 ![main build.NET5](https://github.com/NicolasBenitez30/TPBolillero/workflows/main-build.NET5/badge.svg?branch=main) ![main test.NET5](https://github.com/NicolasBenitez30/TPBolillero/workflows/main-test.NET5/badge.svg?branch=main)
-![dev build.NET5](https://github.com/NicolasBenitez30/TPBolillero/workflows/dev-build.NET5/badge.svg?branch=dev) ![dev test.NET5](https://github.com/NicolasBenitez30/TPBolillero/workflows/dev-test.NET5/badge.svg?branch=dev)
 [![Abrir en Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/NicolasBenitez30/TPBolillero)
 <!-- Borra este comentario y linea después haber cambiado arriba las ocurrencias de tu usuario/repo -->
 
