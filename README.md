@@ -44,6 +44,7 @@ _Agrega notas adicionales sobre que cosas se debe instalar, configurar y como ha
 _Menciona las herramientas y versiones que utilizaste para crear tu proyecto_
 
 * [Visual Studio Code](https://code.visualstudio.com/#alt-downloads) - Editor de código.
+* [Xunit](https://www.nuget.org/packages/xunit) - Dependencia de Test Unit
 
 ## Versionado 📌
 

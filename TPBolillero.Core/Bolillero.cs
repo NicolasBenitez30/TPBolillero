@@ -14,16 +14,16 @@ namespace TPBolillero.Core
             Afuera = new List<byte>();
             Azar = azar;
         }
-        public Bolillero(IAzar azar, byte numeros) 
+        public Bolillero(IAzar azar, byte numeros) : this(azar)
             => CrearBolillas(numeros);
         private void CrearBolillas(byte numeros)
         {
-            for (int i = 0; i < numeros -1; i++)
-                Adentro.Add(numeros);
+            for (byte i = 0; i < numeros; i++)
+                Adentro.Add(i);
         }
         public void ReIngresar()
         {
-            Afuera.AddRange(Adentro);
+            Adentro.AddRange(Afuera);
             Afuera.Clear();
         }
         public byte SacarBolilla()
