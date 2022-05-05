@@ -3,6 +3,7 @@ using System.Collections.Generic;
 namespace TPBolillero.Core
 {
     public class Bolillero
+    // : ICloneable
     {
         public List<byte> Adentro { get; set; }
         public List<byte> Afuera { get; set; }
@@ -47,5 +48,10 @@ namespace TPBolillero.Core
             }
             return cuenta;
         }
+
+        // public object Clone()
+        // {
+            // 
+        // }
     }
 }
