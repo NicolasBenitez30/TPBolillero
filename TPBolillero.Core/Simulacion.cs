@@ -13,8 +13,12 @@ namespace TPBolillero.Core
         public long SimularConHilos(Bolillero bolillero, List<byte> numeros, long veces, long hilos)
         {
             Task<long>[] tareas = new Task<long>[hilos];
-            bolillero.Clone();
-            // for( )
+            for(long i = 0; i < hilos; i++)
+            {
+                var clon = (Bolillero)bolillero.Clone();
+                Task uno = Task.Run( () => clon );
+
+            }
             
             return bolillero.JugarN(numeros, veces);
         }
