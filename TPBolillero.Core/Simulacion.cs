@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace TPBolillero.Core
 {
@@ -16,12 +17,11 @@ namespace TPBolillero.Core
             for(int i = 0; i < hilos; i++)
             {
                 var clon = (Bolillero)bolillero.Clone();
-                Task tareas[i] = Task.Run( () => SimularSinHilos(clon, numeros, veces/hilos));
-                
-
+                tareas[i] = Task.Run( () => SimularSinHilos(clon, numeros, veces/hilos));
             }
+            Task.WaitAll(tareas);
             
-            return bolillero.JugarN(numeros, veces);
+            return tareas.Sum(t => t.Result);
         }
         
     }
