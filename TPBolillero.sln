@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPBolillero.Core", "TPBolil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPBolillero.Test", "TPBolillero.Test\TPBolillero.Test.csproj", "{CFE426B1-9622-4711-8057-FB449F316600}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPBolillero.Consola", "TPBolillero.Consola\TPBolillero.Consola.csproj", "{390907E5-5F6F-4B11-9A0D-F3FA949CF871}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{CFE426B1-9622-4711-8057-FB449F316600}.Release|x64.Build.0 = Release|Any CPU
 		{CFE426B1-9622-4711-8057-FB449F316600}.Release|x86.ActiveCfg = Release|Any CPU
 		{CFE426B1-9622-4711-8057-FB449F316600}.Release|x86.Build.0 = Release|Any CPU
+		{390907E5-5F6F-4B11-9A0D-F3FA949CF871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{390907E5-5F6F-4B11-9A0D-F3FA949CF871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390907E5-5F6F-4B11-9A0D-F3FA949CF871}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{390907E5-5F6F-4B11-9A0D-F3FA949CF871}.Debug|x64.Build.0 = Debug|Any CPU
+		{390907E5-5F6F-4B11-9A0D-F3FA949CF871}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{390907E5-5F6F-4B11-9A0D-F3FA949CF871}.Debug|x86.Build.0 = Debug|Any CPU
+		{390907E5-5F6F-4B11-9A0D-F3FA949CF871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{390907E5-5F6F-4B11-9A0D-F3FA949CF871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{390907E5-5F6F-4B11-9A0D-F3FA949CF871}.Release|x64.ActiveCfg = Release|Any CPU
+		{390907E5-5F6F-4B11-9A0D-F3FA949CF871}.Release|x64.Build.0 = Release|Any CPU
+		{390907E5-5F6F-4B11-9A0D-F3FA949CF871}.Release|x86.ActiveCfg = Release|Any CPU
+		{390907E5-5F6F-4B11-9A0D-F3FA949CF871}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
