@@ -18,11 +18,11 @@ namespace TPBolillero.Core
             => CrearBolillas(numeros);
         
 
-        private Bolillero(List<byte> Adentro, List<byte> Afuera)
+        private Bolillero(Bolillero original)
         {
-            Adentro = new List<byte>();
-            Afuera = new List<byte>();
-            Random Aleatorio = new Random();
+            Adentro = new(original.Adentro);
+            Afuera = new(original.Afuera);
+            Azar = original.Azar;
         }
         private void CrearBolillas(byte numeros)
         {
@@ -51,14 +51,15 @@ namespace TPBolillero.Core
             for(long i = 0; i < veces; i++)
             {
                 if(Jugar(numeros))
-                    cuenta++;                
+                    cuenta++;   
+                ReIngresar();
             }
             return cuenta;
         }
 
         public object Clone()
         {
-            Bolillero Clon = new Bolillero(Adentro, Afuera);
+            Bolillero Clon = new Bolillero(this);
             return Clon;
         }
     }
