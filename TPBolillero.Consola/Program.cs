@@ -15,7 +15,8 @@ namespace TPBolillero.Consola
             Simulacion simp = new Simulacion();
             Bolillero boli = new Bolillero(azar, 100);
             List<byte> jugada = new List<byte> {1,4,6};
-            long veces = 1000000;
+            long veces = 100000000;
+            int hilos = 8;
             System.Console.WriteLine("Simulacion Sin Hilos");
             stopWatch.Start();
             System.Console.WriteLine(simp.SimularSinHilos(boli, jugada, veces)); 
@@ -28,7 +29,7 @@ namespace TPBolillero.Consola
 
             System.Console.WriteLine("Simulacion con Hilos");
             stopWatch.Start();
-            System.Console.WriteLine(simp.SimularConHilos(boli, jugada, veces, 6));
+            System.Console.WriteLine(simp.SimularConHilos(boli, jugada, veces, hilos));
             stopWatch.Stop();
             System.Console.WriteLine("Tiempo de transcurrido: "+ elapsedTime);
             stopWatch.Reset();
