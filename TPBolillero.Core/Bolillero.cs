@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace TPBolillero.Core
 {
-    public class Bolillero: ICloneable
+    public class Bolillero : ICloneable
     {
         public List<byte> Adentro { get; set; }
         public List<byte> Afuera { get; set; }
@@ -16,13 +16,13 @@ namespace TPBolillero.Core
         }
         public Bolillero(IAzar azar, byte numeros) : this(azar)
             => CrearBolillas(numeros);
-        
+
 
         private Bolillero(Bolillero original)
         {
             Adentro = new(original.Adentro);
             Afuera = new(original.Afuera);
-            Azar = original.Azar;
+            Azar = original.Azar.Clonar();
         }
         private void CrearBolillas(byte numeros)
         {
@@ -48,11 +48,11 @@ namespace TPBolillero.Core
         public long JugarN(List<byte> numeros, long veces)
         {
             long cuenta = 0;
-            for(long i = 0; i < veces; i++)
+            for (long i = 0; i < veces; i++)
             {
-                if(Jugar(numeros))
-                    cuenta++;   
                 ReIngresar();
+                if (Jugar(numeros))
+                    cuenta++;
             }
             return cuenta;
         }

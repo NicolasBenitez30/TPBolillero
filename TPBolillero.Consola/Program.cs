@@ -14,12 +14,12 @@ namespace TPBolillero.Consola
             Stopwatch stopWatch = new Stopwatch();
             Simulacion simp = new Simulacion();
             Bolillero boli = new Bolillero(azar, 100);
-            List<byte> jugada = new List<byte> {1,4,6};
+            List<byte> jugada = new List<byte> { 1, 4, 6 };
             long veces = 100000000;
             int hilos = 8;
             System.Console.WriteLine("Simulacion Sin Hilos");
             stopWatch.Start();
-            System.Console.WriteLine(simp.SimularSinHilos(boli, jugada, veces)); 
+            System.Console.WriteLine(simp.SimularSinHilos(boli, jugada, veces));
             stopWatch.Stop();
             var ts = stopWatch.Elapsed;
             string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}",
@@ -31,7 +31,10 @@ namespace TPBolillero.Consola
             stopWatch.Start();
             System.Console.WriteLine(simp.SimularConHilos(boli, jugada, veces, hilos));
             stopWatch.Stop();
-            System.Console.WriteLine("Tiempo de transcurrido: "+ elapsedTime);
+            ts = stopWatch.Elapsed;
+            elapsedTime = String.Format("{0:00}:{1:00}:{2:00}",
+            ts.Hours, ts.Minutes, ts.Seconds);
+            System.Console.WriteLine("Tiempo de transcurrido: " + elapsedTime);
             stopWatch.Reset();
         }
     }
